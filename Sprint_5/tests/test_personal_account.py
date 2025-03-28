@@ -28,7 +28,6 @@ class TestPersonalAccount:
         driver.find_element(TestLocators.LOGIN_BUTTON).click()
         driver.find_element(TestLocators.PERSONAL_ACCOUNT_BUTTON).click()
         assert driver.current_url == ProfileURL
-        driver.quit()
 
     def test_go_to_constructor_success(self, driver):
         driver.get(ProfileURL)
@@ -41,7 +40,6 @@ class TestPersonalAccount:
         ).click()
         constructor_indicator = driver.find_element(TestLocators.CONSTRUCTOR_HEADER)
         assert constructor_indicator.text == "Соберите бургер"
-        driver.quit()
 
     def test_logout_success(self, driver):
         driver.get(ProfileURL)
@@ -51,4 +49,3 @@ class TestPersonalAccount:
         driver.find_element(TestLocators.EXIT_BUTTON)
         login_button = driver.find_element(TestLocators.LOGIN_BUTTON)
         assert login_button.text == "Войти"
-        driver.quit()
