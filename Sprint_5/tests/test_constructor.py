@@ -14,7 +14,6 @@ class TestSectionConstructor:
         assert (
             driver.find_element(TestLocators.SAUCE).text == "Соус фирменный Space Sauce"
         )
-        driver.quit()
 
     def test_seach_section_buns_success(self, driver):
         driver.get(BaseURL)
@@ -25,7 +24,6 @@ class TestSectionConstructor:
         assert (
             driver.find_element(TestLocators.BREAD).text == "Флюоресцентная булка R2-D3"
         )
-        driver.quit()
 
     def test_seach_section_fillings_success(self, driver):
         driver.get(BaseURL)
@@ -36,4 +34,3 @@ class TestSectionConstructor:
         assert (
             driver.find_element(TestLocators.FILLING).text == "Филе Люминесцентного тетраодонтимформа"
         )
-        driver.quit()
