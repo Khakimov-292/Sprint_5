@@ -27,7 +27,6 @@ class TestLogin:
             visibility_of_element_located(TestLocators.ORDER_PLACE_BUTTON)
         )
         assert len(driver.find_elements(TestLocators.ORDER_PLACE_BUTTON)) == 1
-        driver.quit()
 
     def test_login_in_personal_account_success(self, driver):
         driver.get(BaseURL)
@@ -46,7 +45,6 @@ class TestLogin:
         driver.find_element(TestLocators.PASSWORD_FIELD).send_keys("qwerty")
         driver.find_element(TestLocators.LOGIN_BUTTON).click()
         assert len(driver.find_elements(TestLocators.ORDER_PLACE_BUTTON)) == 1
-        driver.quit()
 
     def test_login_in_registration_form_success(self, driver):
         driver.get(BaseURL)
@@ -70,7 +68,6 @@ class TestLogin:
         driver.find_element(TestLocators.PASSWORD_FIELD).send_keys("qwerty")
         driver.find_element(TestLocators.LOGIN_BUTTON).click()
         assert len(driver.find_elements(TestLocators.ORDER_PLACE_BUTTON)) == 1
-        driver.quit()
 
     def test_login_in_password_recovery_form_success(self, driver):
         driver.get(BaseURL)
@@ -94,4 +91,3 @@ class TestLogin:
         driver.find_element(TestLocators.PASSWORD_FIELD).send_keys("qwerty")
         driver.find_element(TestLocators.LOGIN_BUTTON).click()
         assert len(driver.find_elements(TestLocators.ORDER_PLACE_BUTTON)) == 1
-        driver.quit()
