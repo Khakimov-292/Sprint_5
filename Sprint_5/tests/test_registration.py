@@ -29,7 +29,6 @@ class TestRegistration:
         driver.find_element(TestLocators.PASSWORD_FIELD).send_keys("qwerty")
         driver.find_element(TestLocators.LOGIN_BUTTON).click()
         assert driver.current_url == LoginURL
-        driver.quit()
 
     def test_registration_with_incorrect_password(self, driver):
         driver.get(BaseURL)
@@ -54,4 +53,3 @@ class TestRegistration:
         driver.find_element(TestLocators.LOGIN_BUTTON).click()
         error_text = driver.find_element(TestLocators.ERROR_TEXT)
         assert error_text.text == "Некорректный пароль"
-        driver.quit()
